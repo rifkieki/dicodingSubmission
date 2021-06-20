@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  dicodingSubmission
-//
-//  Created by Rifki Triaditiya Putra on 24/05/21.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -12,14 +5,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var destinasiTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        // Menambahkan title pada Navigation
-        self.navigationItem.title = "Pahlawan Indonesia"
+    
+        self.navigationItem.title = "Destinasi Bintan"
         
         destinasiTableView.dataSource = self
         
-        // Menambahkan delegate ke table view
         destinasiTableView.delegate = self
         
         destinasiTableView.register(UINib(nibName: "destinasiTableViewCell", bundle: nil), forCellReuseIdentifier: "DestinasiCell")
@@ -52,13 +42,11 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Memanggil View Controller dengan berkas NIB/XIB di dalamnya
+
         let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
         
-        // Mengirim data hero
         detail.destinationPlaces = destinationPlaces[indexPath.row]
         
-        // Push/mendorong view controller lain
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }

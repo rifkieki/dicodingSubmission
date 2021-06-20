@@ -30,7 +30,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vmk-Px-76i" secondAttribute="bottom" id="xct-W2-98D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JLB-im-oAA"/>
+                    <navigationItem key="navigationItem" id="JLB-im-oAA">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="mzi-H7-mdN">
+                            <connections>
+                                <segue destination="q9O-JD-uId" kind="show" identifier="profile" id="lJ5-Lw-2CE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="destinasiTableView" destination="vmk-Px-76i" id="a5C-st-Ivc"/>
                     </connections>
@@ -38,6 +44,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="871.01449275362324" y="93.75"/>
+        </scene>
+        <!--profile-->
+        <scene sceneID="Swb-bj-77a">
+            <objects>
+                <viewController title="profile" id="q9O-JD-uId" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xdo-Kc-kcr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4 - Pas Foto 4x6 - Rifki Triaditiya Putra" translatesAutoresizingMaskIntoConstraints="NO" id="ltd-6o-E32">
+                                <rect key="frame" x="102" y="133" width="210" height="236"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="EyN-eW-ren"/>
+                                    <constraint firstAttribute="height" constant="236" id="yZ6-Gt-BoZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rifki Triaditiya Putra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18r-7u-1j0">
+                                <rect key="frame" x="112" y="409" width="190" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rifkiaditiya44@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oU-Pv-QCm">
+                                <rect key="frame" x="116" y="438" width="183" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hUf-Z7-aJY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hUf-Z7-aJY" firstAttribute="bottom" secondItem="5oU-Pv-QCm" secondAttribute="bottom" constant="406" id="36H-nS-4xP"/>
+                            <constraint firstItem="5oU-Pv-QCm" firstAttribute="top" secondItem="18r-7u-1j0" secondAttribute="bottom" constant="5" id="8uI-1I-agw"/>
+                            <constraint firstItem="18r-7u-1j0" firstAttribute="leading" secondItem="hUf-Z7-aJY" secondAttribute="leading" constant="112" id="CUb-qr-QZm"/>
+                            <constraint firstItem="hUf-Z7-aJY" firstAttribute="trailing" secondItem="5oU-Pv-QCm" secondAttribute="trailing" constant="115" id="Csw-su-C1x"/>
+                            <constraint firstItem="hUf-Z7-aJY" firstAttribute="trailing" secondItem="ltd-6o-E32" secondAttribute="trailing" constant="102" id="KHH-f8-LFx"/>
+                            <constraint firstItem="5oU-Pv-QCm" firstAttribute="top" secondItem="18r-7u-1j0" secondAttribute="bottom" constant="5" id="amT-QN-MqQ"/>
+                            <constraint firstItem="ltd-6o-E32" firstAttribute="leading" secondItem="hUf-Z7-aJY" secondAttribute="leading" constant="102" id="bhD-Qp-jqR"/>
+                            <constraint firstItem="18r-7u-1j0" firstAttribute="top" secondItem="ltd-6o-E32" secondAttribute="bottom" constant="40" id="iqa-n9-JHd"/>
+                            <constraint firstItem="ltd-6o-E32" firstAttribute="top" secondItem="hUf-Z7-aJY" secondAttribute="top" constant="45" id="x6E-6I-CgP"/>
+                            <constraint firstItem="hUf-Z7-aJY" firstAttribute="trailing" secondItem="18r-7u-1j0" secondAttribute="trailing" constant="112" id="x8J-sS-O0S"/>
+                            <constraint firstItem="5oU-Pv-QCm" firstAttribute="leading" secondItem="hUf-Z7-aJY" secondAttribute="leading" constant="116" id="zw7-J3-3X3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5cg-MI-oE1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYC-Zz-cxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8VA-ZK-b4y">
@@ -59,6 +115,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="4 - Pas Foto 4x6 - Rifki Triaditiya Putra" width="351" height="525"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

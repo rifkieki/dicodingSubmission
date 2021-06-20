@@ -1,10 +1,3 @@
-//
-//  DetailViewController.swift
-//  dicodingSubmission
-//
-//  Created by Rifki Triaditiya Putra on 24/05/21.
-//
-
 import UIKit
 
 class DetailViewController: UIViewController {
@@ -18,8 +11,6 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
         if let result = destinationPlaces {
             photoDestination.image = result.photoDestination
             destinationName.text = result.destinationName
